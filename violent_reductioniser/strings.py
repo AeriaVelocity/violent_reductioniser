@@ -36,7 +36,7 @@ This WILL result in loss of data. (Your original file is still safe, though.)",
 }
 
 if locale.getlocale()[0] == "en_US":
-    STRINGS.title = "Violent Reductionizer"
-    STRINGS.reductionise_button = "Reductionize"
-    STRINGS.missing_ffmpeg = "FFmpeg not found. Violent Reductionizer will now exit."
-    STRINGS.success_message = "The video has been successfully reductionized."
+    STRINGS["title"] = "Violent Reductionizer"
+    STRINGS["reductionise_button"] = "Reductionize"
+    STRINGS["missing_ffmpeg"] = "FFmpeg not found. Violent Reductionizer will now exit."
+    STRINGS["success_message"] = "The video has been successfully reductionized."
