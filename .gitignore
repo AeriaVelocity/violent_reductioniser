@@ -1,0 +1,8 @@
+# Python ignore list
+__pycache__/
+*.pyc
+
+# Test video files
+*.mp4
+*.webm
+*.mkv
