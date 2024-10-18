@@ -28,7 +28,7 @@ STRINGS = {
     "input_is_output": "Input and output files cannot be the same.",
     "warning_title": "Warning!!",
     "warning_message": "Proceeding with this operation will result in \
-utter devastation of your original video file. \
+utter devastation of your chosen video file. \
 This WILL result in loss of data. (Your original file is still safe, though.)",
     "ffmpeg_error": "FFmpeg error",
     "success_title": "Success!",
