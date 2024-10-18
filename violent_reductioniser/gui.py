@@ -101,7 +101,7 @@ class ViolentReductioniser:
             messagebox.showerror(STRINGS["error_title"], STRINGS["missing_fields"])
             return
 
-        if input_file == output_file:
+        if os.path.abspath(input_file) == os.path.abspath(output_file):
             messagebox.showerror(STRINGS["error_title"], STRINGS["input_is_output"])
             return
 
