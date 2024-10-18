@@ -12,6 +12,7 @@ setup(
             "violent_reductioniser = run:main",
         ]
     },
+    python_requires=">=3.5",
     author="Arsalan 'Aeri' Kazmi",
     license="GPL-3.0-or-later",
 )
