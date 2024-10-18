@@ -8,7 +8,7 @@ This file is part of Violent Reductioniser.
 """
 
 import tkinter as tk
-from tkinter import messagebox, filedialog
+from tkinter import messagebox, filedialog, ttk
 import subprocess
 import os
 from .strings import STRINGS
@@ -17,6 +17,9 @@ class ViolentReductioniser:
     def __init__(self):
         self.root = tk.Tk()
         self.root.title(STRINGS["title"])
+
+        frame = ttk.Frame(self.root)
+        frame.pack()
 
         try:
             subprocess.check_output(["ffmpeg", "-version"])
@@ -34,28 +37,28 @@ class ViolentReductioniser:
         elif cwd.startswith(homedir):
             cwd = "~" + cwd[len(homedir):]
 
-        self.cwd_label = tk.Label(self.root, text=STRINGS["cwd_label"] + cwd)
+        self.cwd_label = ttk.Label(frame, text=STRINGS["cwd_label"] + cwd)
         self.cwd_label.pack()
 
-        self.input_label = tk.Label(self.root, text=STRINGS["input_label"])
+        self.input_label = ttk.Label(frame, text=STRINGS["input_label"])
         self.input_label.pack()
-        self.input_entry = tk.Entry(self.root, width=50)
+        self.input_entry = ttk.Entry(frame, width=50)
         self.input_entry.pack()
-        self.browse_input_button = tk.Button(self.root,
+        self.browse_input_button = ttk.Button(frame,
                                              text=STRINGS["browse_button"],
                                              command=self.browse_input)
         self.browse_input_button.pack()
 
-        self.output_label = tk.Label(self.root, text=STRINGS["output_label"])
+        self.output_label = ttk.Label(frame, text=STRINGS["output_label"])
         self.output_label.pack()
-        self.output_entry = tk.Entry(self.root, width=50)
+        self.output_entry = ttk.Entry(frame, width=50)
         self.output_entry.pack()
-        self.browse_output_button = tk.Button(self.root,
+        self.browse_output_button = ttk.Button(frame,
                                               text=STRINGS["browse_button"],
                                               command=self.browse_output)
         self.browse_output_button.pack()
 
-        self.button = tk.Button(self.root,
+        self.button = ttk.Button(frame,
                                 text=STRINGS["reductionise_button"],
                                 command=self.run_ffmpeg)
         self.button.pack()
