@@ -22,7 +22,8 @@ STRINGS = {
     "browse_input_title": "Select original video file",
     "browse_output_title": "Select destination file",
     "error_title": "Error",
-    "missing_fields": "No input or output file specified.",
+    "missing_fields": "Input and/or output file unspecified.",
+    "missing_ffmpeg": "FFmpeg not found. Violent Reductioniser will now exit.",
     "file_not_found": "Input file {} not found",
     "input_is_output": "Input and output files cannot be the same.",
     "warning_title": "Warning!!",
@@ -37,4 +38,5 @@ This WILL result in loss of data. (Your original file is still safe, though.)",
 if locale.getlocale()[0] == "en_US":
     STRINGS.title = "Violent Reductionizer"
     STRINGS.reductionise_button = "Reductionize"
+    STRINGS.missing_ffmpeg = "FFmpeg not found. Violent Reductionizer will now exit."
     STRINGS.success_message = "The video has been successfully reductionized."

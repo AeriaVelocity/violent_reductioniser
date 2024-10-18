@@ -18,6 +18,12 @@ class ViolentReductioniser:
         self.root = tk.Tk()
         self.root.title(STRINGS["title"])
 
+        try:
+            subprocess.check_output(["ffmpeg", "-version"])
+        except FileNotFoundError:
+            messagebox.showerror(STRINGS["error_title"], STRINGS["missing_ffmpeg"])
+            exit(1)
+
         cwd = os.getcwd()
         if cwd[:-1] != os.sep:
             cwd = cwd + os.sep
